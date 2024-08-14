@@ -66,14 +66,32 @@ class Dashboard extends StatelessWidget {
                     width: 173.32,
                     height: 248.51,
                     child: Column(
-                      
                       children: [
                         Image.asset("assets/images/banana.png"),
-                        Text("Organic Bananas"),
-                        Text("7pcs, Priceg")
+                        const Text(
+                          "Organic Bananas"
+                        ,style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20
+                          ),
+                          ),
+                        Text("7pcs, Priceg"),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                          
+                          Text("\$4.99",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20
+                            )),
+                          Icon(Icons.add)
+                        ],)
+                        
                       ],
                     ),
-                  )
+                  ),
+                  
                 ],
               ),
             ),

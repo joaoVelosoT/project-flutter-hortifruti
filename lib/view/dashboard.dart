@@ -56,6 +56,7 @@ class Dashboard extends StatelessWidget {
             Container(
               width: 490,
               height: 248,
+              
               child: Row(
                 children: [
                   Container(
@@ -64,31 +65,40 @@ class Dashboard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(18)
                       ),
                     width: 173.32,
-                    height: 248.51,
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/banana.png"),
-                        const Text(
-                          "Organic Bananas"
-                        ,style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20
-                          ),
-                          ),
-                        Text("7pcs, Priceg"),
-                        const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                          
-                          Text("\$4.99",
-                          style: TextStyle(
+                    height: 230.51,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center ,
+                        children: [
+                          Image.asset("assets/images/banana.png"),
+                          const Text(
+                            "Organic Bananas"
+                          ,style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20
-                            )),
-                          Icon(Icons.add)
-                        ],)
-                        
-                      ],
+                            ),
+                            ),
+                          Text("7pcs, Priceg"),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                            
+                            Text("\$4.99",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20
+                              )),
+                            Icon(Icons.add_circle,
+                            color: Colors.green,
+                            size: 40
+                            ,
+                            
+                            )
+                          ],)
+                          
+                        ],
+                      ),
                     ),
                   ),
                   

@@ -1,3 +1,4 @@
+import 'package:app_001/widgets/card.dart';
 import 'package:app_001/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Minha dashboard"),
+          // title: Text("Minha dashboard"),
         ),
         body: Column(
           children: [
@@ -19,13 +20,26 @@ class Dashboard extends StatelessWidget {
               ),
             ),
 
-            const Row(
+            Row(
+              
               children: [
-                Icon(Icons.location_on),
-                Text(
+                
+                Container(
+                  
+                  width: 452,
+
+                  child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    
+                    Icon(Icons.location_on),
+                    Text(
                   "Cotia, São Paulo",
                   textAlign: TextAlign.center,
                 ),
+                  ],
+                )),
+                
               ],
             ),
 
@@ -52,64 +66,24 @@ class Dashboard extends StatelessWidget {
             //   height: 100,
             // ),
             Text("Ofertas"),
-            
+
             Container(
               width: 490,
               height: 248,
-              
-              child: Row(
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 1, color: Colors.black),
-                      borderRadius: BorderRadius.circular(18)
-                      ),
-                    width: 173.32,
-                    height: 230.51,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center ,
-                        children: [
-                          Image.asset("assets/images/banana.png"),
-                          const Text(
-                            "Organic Bananas"
-                          ,style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20
-                            ),
-                            ),
-                          Text("7pcs, Priceg"),
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                            
-                            Text("\$4.99",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20
-                              )),
-                            Icon(Icons.add_circle,
-                            color: Colors.green,
-                            size: 40
-                            ,
-                            
-                            )
-                          ],)
-                          
-                        ],
-                      ),
-                    ),
-                  ),
-                  
+                  card(),
+                  card(),
                 ],
               ),
             ),
+
+            
             Text("Mais vendidos"),
             Text("Card de frutas")
           ],
         ));
   }
 }
-
 

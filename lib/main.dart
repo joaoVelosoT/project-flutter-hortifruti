@@ -1,5 +1,7 @@
 // import 'package:app_001/view/homepage.dart';
+import 'package:app_001/view/categories.dart';
 import 'package:app_001/view/dashboard.dart';
+import 'package:app_001/widgets/container_menuProducts.dart';
 import 'package:flutter/material.dart';
 import 'package:app_001/view/mypage.dart';
 
@@ -20,6 +22,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const Dashboard());
+        home: const categories());
   }
 }

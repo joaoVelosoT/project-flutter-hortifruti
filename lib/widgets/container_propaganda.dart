@@ -18,7 +18,7 @@ class ContainerPropaganda extends StatelessWidget {
     
         image: const DecorationImage(
           image: AssetImage("assets/images/propaganda.png"),
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
       ),
       ),
       child: const Stack(
